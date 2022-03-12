@@ -1,0 +1,24 @@
+<title>Ordenes</title>
+
+<h1>ORDENES</h1>
+
+<div><a href="/logout">Cerrar Sesion</a></div>
+
+<div>
+    <a href="/ordenes/add"><input type="button" value="Agregar una nueva"></a>
+</div>
+
+<div>
+    
+   <%ordenes.forEach(OrdenSchema => {%>
+       <h2><%= OrdenSchema.titulo %></h2>
+       <p><%= OrdenSchema.descripcion %></p>
+       <a href="/ordenes/edit/<%= OrdenSchema.id %>"><input type="button" value="Editar"></a>
+       <form action="/ordenes/delete/<%= OrdenSchema.id %>?_method=DELETE" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Borrar</button>
+       </form>
+       <p><br></p>
+   <%})%>    
+
+</div>

@@ -1,0 +1,20 @@
+<title>Agregar Orden</title>
+
+<h1>Agregar Una Nueva Orden</h1>
+
+<form action="/add-ordenes" method="POST">
+
+    <div>
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo"
+        required>
+    </div>
+
+    <div>
+        <textarea type="text" id="descripcion" name="descripcion"
+        placeholder ="Descripcion" required></textarea>
+    </div>
+
+    <button type="submit">Agregar</button>
+
+</form>

@@ -1,0 +1,20 @@
+<title>Editar Orden</title>
+
+<h1>Editar Orden</h1>
+
+<form action="/edit-ordenes/<%= orden.id %>?_method=PUT" method="POST">
+
+    <input type="hidden" name="_method" value="PUT">
+
+    <div>
+        <label for="titulo">Titulo</label>
+        <input type="text" id="titulo" name="titulo"
+        value="<%= orden.titulo %>"required>
+    </div>
+
+    <div>
+        <textarea type="text" id="descripcion" name="descripcion"
+        required><%= orden.descripcion %></textarea>
+    </div>
+
+    <button type="submit">Guardar cambios</button>
