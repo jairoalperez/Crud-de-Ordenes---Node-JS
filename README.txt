@@ -24,7 +24,7 @@ Para el desarrollo del proyecto utilice Node.JS con Express, algunos de los modu
 
 -express-session
 -method-override
--nudemon
+-nodemon
 
 
 
